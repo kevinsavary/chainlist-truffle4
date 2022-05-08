@@ -3,3 +3,29 @@ Deploy front end to github
 // clean the compile files
 rm -r -fo node_modules
 rm -r -fo build
+
+// deploy to git
+
+git init
+git add .
+git commit -m "first commit"
+
+//setup git for me
+
+git config --global user.email
+git config --global user.name
+git remote add origin https://github.com/kevinsavary/chainlist-truffle4.git
+git push -u origin master
+
+
+mkdir docs
+
+// create *cmd script with following content
+
+************
+robocopy src docs /e
+robocopy build\contracts docs
+git add .
+git commit -m "Adding front end files to git hub pages"
+git push
+*****************
