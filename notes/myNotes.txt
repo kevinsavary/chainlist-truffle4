@@ -1,0 +1,5 @@
+Deploy front end to github
+
+// clean the compile files
+rm -r -fo node_modules
+rm -r -fo build
